@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!--
+
+    Copyright (c) 2018, 2021 Oracle and/or its affiliates. All rights reserved.
+
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Distribution License v. 1.0, which is available at
+    http://www.eclipse.org/org/documents/edl-v10.php.
+
+    SPDX-License-Identifier: BSD-3-Clause
+
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+	<title>Projecto Modulo 9</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h2>Hola, Bienvenido a GestorMed!</h2>
+		<h:graphicImage url="#{resource['images:med.png']}"
+			alt="GestorMed presentation image" />
+
+		<h:commandButton id="registroPaciente" value="Registrar paciente"
+			action="registroPaciente" />
+
+		<h:commandButton id="registroConsultorio"
+			value="Registrar consultorio" action="registroConsultorio" />
+
+		<h:commandButton id="pacientesList" value="Lista de pacientes"
+			action="pacientesList" />
+
+		<h:commandButton id="consultoriosList" value="Lista de consultorios"
+			action="consultoriosList" />
+
+	</h:form>
+	<div class="messagecolor">
+		<h:messages showSummary="true" showDetail="false"
+			errorStyle="color: pink" infoStyle="color: blue" />
+	</div>
+</h:body>
+</html>
+

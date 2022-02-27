@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!--
+
+    Copyright (c) 2018, 2021 Oracle and/or its affiliates. All rights reserved.
+
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Distribution License v. 1.0, which is available at
+    http://www.eclipse.org/org/documents/edl-v10.php.
+
+    SPDX-License-Identifier: BSD-3-Clause
+
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Projecto Modulo 9</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h2>Nombre</h2>
+		<h:inputText id="nombre" title="Nombre" value="#{consultorioBean.nombre}"
+			required="true" requiredMessage="Error: Un nombre es requerido"
+			maxlength="20" />
+		<h2>Telefono</h2>
+		<h:inputText id="telefono" title="Telefono"
+			value="#{consultorioBean.telefono}" required="true"
+			requiredMessage="Error: Un telfono es requerido" maxlength="10" />
+		<h2>Correo</h2>
+		<h:inputText id="correo" title="Correo" value="#{consultorioBean.correo}"
+			required="true" requiredMessage="Error: Un correo es requerido"
+			maxlength="25" />
+		<h2>Direccion</h2>
+		<h:inputText id="direccion" title="Direccion"
+			value="#{consultorioBean.direccion}" required="true"
+			requiredMessage="Error: Una direccion es requerida" maxlength="25" />
+		<h2>Código Postal</h2>
+		<h:inputText id="cp" title="Codigo Postal" value="#{consultorioBean.cp}"
+			required="true" requiredMessage="Error: Un cp es requerido"
+			maxlength="5" />
+		<h2>Status</h2>
+		<h:selectOneMenu id="status" title="Status" value="#{pacienteBean.status}"
+			required="true" requiredMessage="Error: Un status es requerido">
+			<f:selectItem
+				itemValue="1"
+				itemLabel="Alta"
+			/>
+			<f:selectItem
+				itemValue="2"
+				itemLabel="Baja"
+			/>
+		</h:selectOneMenu>
+		<p></p>
+		<h:commandButton id="submit" value="Enviar"
+			action="#{consultorioBean.registrar}" />
+		<h:commandButton id="reset" value="Limpiar" type="reset" />
+	</h:form>
+	<div class="messagecolor">
+		<h:messages showSummary="true" showDetail="false"
+			errorStyle="color: red" infoStyle="color: blue" />
+	</div>
+</h:body>
+</html>
+
